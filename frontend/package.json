@@ -6,7 +6,7 @@
     "test:ci": "nyc --reporter=text mocha './test/**/*.test.js'",
     "watch-test": "npm test -- --watch --recursive",
     "cover": "nyc report --reporter=html --reporter=text --reporter=lcovonly --report-dir=test/coverage;",
-    "start": "webpack --watch --config webpack.development.js"
+    "start": "webpack --mode production --config webpack.development.js"
   },
   "dependencies": {
     "@material-ui/core": "^4.4.1",
