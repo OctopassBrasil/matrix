@@ -1,8 +1,8 @@
 {
   "name": "matrix-backend",
   "scripts": {
-    "build": "babel ./app -d ./dist",
-    "start": "nodemon --exec babel-node ./app/index.js",
+    "build-backend": "babel ./app -d ./dist",
+    "start": "NODE_ENV=production node ./dist/index.js",
     "start-backend": "NODE_ENV=production node ./dist/index.js",
     "test": "jest app/ --watch",
     "cover": "jest app/ test --collect-coverage",
