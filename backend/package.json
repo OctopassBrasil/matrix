@@ -1,6 +1,7 @@
 {
   "name": "matrix-backend",
   "scripts": {
+    "prestart": "npm run build-backend",
     "build-backend": "babel ./app -d ./dist",
     "start": "NODE_ENV=production node ./dist/index.js",
     "start-backend": "NODE_ENV=production node ./dist/index.js",
