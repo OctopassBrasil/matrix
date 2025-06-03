@@ -1,11 +1,15 @@
 version: '3'
+
 services:
-  web:
+  matrix-app:
+    build:
+      context: .
     working_dir: /var/app
     env_file:
-      - variables.env
+      - .env
     ports:
-     - '8080:8080'    
-    # entrypoint: 'sh /docker-entrypoint.sh npm run start'
-    build:
-      context: ./
+      - '8080:8080'
+    volumes:
+      - .:/var/app
+    entrypoint: ["sh", "/docker-entrypoint.sh"]
+    command: ["npm", "--prefix", "backend/", "run", "start-backend"]
